@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 :root { color-scheme: light; }
-body { @apply bg-slate-50 text-slate-900 antialiased; font-family: Inter, system-ui, sans-serif; }
-.section-title { @apply text-3xl font-bold tracking-tight text-slate-900 md:text-4xl; }
-.section-subtitle { @apply mt-4 max-w-3xl text-lg text-slate-600; }
+body { background: #F9FAF3; color: #1A1C18; @apply antialiased; font-family: Inter, system-ui, sans-serif; }
+.section-title { @apply text-3xl font-bold tracking-tight md:text-4xl; color: #1A1C18; }
+.section-subtitle { @apply mt-4 max-w-3xl text-lg; color: #42493F; }
