@@ -4,17 +4,34 @@ export default {
   darkMode: ['class'],
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
-    container: { center: true, padding: '1rem', screens: { '2xl': '1440px' } },
+    container: {
+      center: true,
+      padding: '1rem',
+      screens: {
+        '2xl': '1280px'
+      }
+    },
     extend: {
       colors: {
-        background: '#f9faf3', foreground: '#1a1c18',
-        primary: { DEFAULT: '#4F7302', foreground: '#ffffff', dark: '#022601', hover: '#3E5902' },
-        secondary: { DEFAULT: '#799833', foreground: '#ffffff' },
-        surface: '#ffffff', 'surface-soft': '#D6D979',
-        border: '#E2E8F0', 'on-surface-variant': '#42493f', muted: '#eeeee7'
+        border: 'hsl(220 14% 90%)',
+        input: 'hsl(220 14% 90%)',
+        ring: 'hsl(221 83% 53%)',
+        background: 'hsl(0 0% 100%)',
+        foreground: 'hsl(222 47% 11%)',
+        primary: {
+          DEFAULT: 'hsl(221 83% 53%)',
+          foreground: 'hsl(210 40% 98%)'
+        },
+        muted: {
+          DEFAULT: 'hsl(210 40% 96.1%)',
+          foreground: 'hsl(215.4 16.3% 46.9%)'
+        }
       },
-      borderRadius: { sm: '4px', DEFAULT: '8px', lg: '8px', xl: '16px' },
-      boxShadow: { ambient: '0px 4px 20px rgba(2, 38, 1, 0.08)' }
+      borderRadius: {
+        lg: '0.75rem',
+        md: '0.5rem',
+        sm: '0.375rem'
+      }
     }
   },
   plugins: []
