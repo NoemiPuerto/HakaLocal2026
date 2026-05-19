@@ -24,6 +24,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import logo from './assets/VectorDark.svg'
 
 const sections = [['Cómo funciona', '#como-funciona'], ['Beneficios', '#beneficios'], ['Impacto', '#impacto'], ['FAQ', '#faq']]
 const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.12 } } }
@@ -62,15 +63,12 @@ export default function App() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className='min-h-screen overflow-x-clip bg-[#F5F7F1] text-[#0D1B11]'>
-      <div className='pointer-events-none fixed inset-0 -z-10'>
-        <motion.div className='absolute -left-20 top-20 h-64 w-64 rounded-full bg-[#A7D948]/25 blur-3xl' animate={{ y: [0, 20, 0] }} transition={{ duration: 8, repeat: Infinity }} />
-        <motion.div className='absolute right-0 top-60 h-72 w-72 rounded-full bg-[#4F7D00]/20 blur-3xl' animate={{ y: [0, -16, 0] }} transition={{ duration: 9, repeat: Infinity }} />
-      </div>
-
-      <header className='sticky top-0 z-50 border-b border-[#D7E5C7]/80 bg-white/70 backdrop-blur-xl'>
-        <nav className='container flex h-18 items-center justify-between'>
-          <a href='#' className='text-xl font-bold tracking-tight'>PÉEK <span className='text-[#4F7D00]'>Local</span></a>
+    <div className='min-h-screen bg-[#F9FAF3] text-[#1A1C18]'>
+      <header className='sticky top-0 z-50 border-b border-[#C2C9BC] bg-[#F9FAF3]/95 backdrop-blur'>
+        <nav className='container flex h-16 items-center justify-between'>
+          <a href="/" className='flex items-center'>
+  <img src={logo} alt="Logo" className="h-8 w-auto" />
+</a>
           <div className='hidden items-center gap-7 md:flex'>
             {sections.map(([n, h]) => <a key={n} href={h} className='text-sm text-[#2A3B2B] transition hover:text-[#4F7D00]'>{n}</a>)}
             <Button className='shadow-[0_8px_30px_-12px_rgba(79,125,0,.8)]'>Unirme ahora</Button>
@@ -94,23 +92,12 @@ export default function App() {
               {[["+3.5x", 'más pedidos'], ['24/7', 'operación conectada'], ['IA', 'recomendaciones']].map(([n, t]) => <Card key={String(t)} className='border-[#D7E5C7] bg-white/80 p-4 shadow-[0_10px_30px_-20px_rgba(11,29,11,.45)]'><p className='text-2xl font-bold text-[#163300]'>{String(n)}</p><p className='text-sm text-[#3B4B3D]'>{String(t)}</p></Card>)}
             </motion.div>
           </motion.div>
-
-          <motion.div initial={{ opacity: 0, x: 25 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }} className='relative'>
-            <div className='rounded-[2rem] border border-[#294d1e] bg-[#0B1D0B] p-5 text-white shadow-2xl'>
-              <div className='mb-4 flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-4'>
-                <p className='font-semibold'>Panel operativo PÉEK</p>
-                <span className='rounded-full bg-[#A7D948] px-3 py-1 text-xs font-semibold text-[#163300]'>En vivo</span>
-              </div>
-              <div className='grid gap-3 sm:grid-cols-2'>
-                <Card className='border-white/10 bg-white/5 p-4 text-white'><CircleDollarSign className='mb-2 text-[#A7D948]' /><p className='text-xs text-white/70'>Ventas hoy</p><p className='text-2xl font-bold'>$128,450</p></Card>
-                <Card className='border-white/10 bg-white/5 p-4 text-white'><Truck className='mb-2 text-[#A7D948]' /><p className='text-xs text-white/70'>Entregas activas</p><p className='text-2xl font-bold'>186</p></Card>
-                <Card className='border-white/10 bg-white/5 p-4 text-white'><MapPinned className='mb-2 text-[#A7D948]' /><p className='text-xs text-white/70'>Cobertura</p><p className='text-2xl font-bold'>14 zonas</p></Card>
-                <Card className='border-white/10 bg-white/5 p-4 text-white'><Clock3 className='mb-2 text-[#A7D948]' /><p className='text-xs text-white/70'>Tiempo promedio</p><p className='text-2xl font-bold'>29 min</p></Card>
-              </div>
-            </div>
-            <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 5, repeat: Infinity }} className='absolute -left-6 top-10 rounded-2xl border border-[#D7E5C7] bg-white p-4 shadow-xl'>
-              <p className='text-xs text-[#506252]'>IA de demanda</p><p className='font-semibold text-[#163300]'>+22% en ticket promedio</p><BrainCircuit className='mt-2 h-5 w-5 text-[#4F7D00]' />
-            </motion.div>
+          <motion.div initial={{ opacity: 0, scale: .98 }} animate={{ opacity: 1, scale: 1 }} className='overflow-hidden rounded-3xl border border-[#C2C9BC]'>
+            <img
+              src='https://http2.mlstatic.com/storage/pog-cm-admin/calm-assets/mujer-comerciante-sonriente-pymes--5b3fbd13.jpg'
+              alt='Emprendedores y comerciantes locales en un mercado'
+              className='h-full min-h-[420px] w-full object-cover'
+            />
           </motion.div>
         </section>
         <section className='border-y border-[#D7E5C7] bg-gradient-to-b from-[#EFF5E5] to-[#F5F7F1] py-16'>
