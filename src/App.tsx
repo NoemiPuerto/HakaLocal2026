@@ -19,6 +19,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import logo from './assets/VectorDark.svg'
 
 const fade = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }
 const sections = [['Cómo funciona', '#como-funciona'], ['Beneficios', '#beneficios'], ['Impacto', '#impacto'], ['FAQ', '#faq']]
@@ -59,7 +60,9 @@ export default function App() {
     <div className='min-h-screen bg-[#F9FAF3] text-[#1A1C18]'>
       <header className='sticky top-0 z-50 border-b border-[#C2C9BC] bg-[#F9FAF3]/95 backdrop-blur'>
         <nav className='container flex h-16 items-center justify-between'>
-          <a href='#' className='text-xl font-bold text-[#1A1C18]'>Péek <span className='text-[#4F7302]'>Local</span></a>
+          <a href="/" className='flex items-center'>
+  <img src={logo} alt="Logo" className="h-8 w-auto" />
+</a>
           <div className='hidden items-center gap-7 md:flex'>
             {sections.map(([n, h]) => <a key={n} href={h} className='text-sm text-[#42493F] hover:text-[#4F7302]'>{n}</a>)}
             <Button>Unirme ahora</Button>
@@ -82,7 +85,7 @@ export default function App() {
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: .98 }} animate={{ opacity: 1, scale: 1 }} className='overflow-hidden rounded-3xl border border-[#C2C9BC]'>
             <img
-              src='https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1400&q=80'
+              src='https://http2.mlstatic.com/storage/pog-cm-admin/calm-assets/mujer-comerciante-sonriente-pymes--5b3fbd13.jpg'
               alt='Emprendedores y comerciantes locales en un mercado'
               className='h-full min-h-[420px] w-full object-cover'
             />
