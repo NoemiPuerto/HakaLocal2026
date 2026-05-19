@@ -122,10 +122,10 @@ export default function App() {
             <div className='mt-10 grid gap-6 md:grid-cols-3'>
               {solutionPillars.map(({ icon: Icon, title, text }) => (
                 <motion.div key={title} whileHover={{ y: -4, scale: 1.01 }}>
-                  <Card className='h-full border-[#365f22] bg-gradient-to-b from-white/10 to-white/5 p-6 text-white'>
+                  <Card className='h-full border-[#365f22] bg-gradient-to-b from-white/10 to-white/5 p-6 text-black'>
                     <Icon className='text-[#A7D948]' />
                     <h3 className='mt-3 text-xl font-semibold'>{title}</h3>
-                    <p className='mt-3 text-white/75'>{text}</p>
+                    <p className='mt-3 text-black/75'>{text}</p>
                   </Card>
                 </motion.div>
               ))}
